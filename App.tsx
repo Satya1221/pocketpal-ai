@@ -45,6 +45,7 @@ import {
   SettingsScreen,
   BenchmarkScreen,
   AboutScreen,
+  WorkspaceScreen,
 
   // Dev tools screen. Only available in debug mode.
   DevToolsScreen,
@@ -180,6 +181,14 @@ const App = observer(() => {
                             options={{
                               headerStyle: styles.headerWithoutDivider,
                               title: currentL10n.screenTitles.settings,
+                            }}
+                          />
+                          <Drawer.Screen
+                            name={ROUTES.WORKSPACE}
+                            component={gestureHandlerRootHOC(WorkspaceScreen)}
+                            options={{
+                              headerStyle: styles.headerWithoutDivider,
+                              title: 'Workspace',
                             }}
                           />
                           <Drawer.Screen
